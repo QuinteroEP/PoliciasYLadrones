@@ -139,10 +139,8 @@ def reset_game():
     robber[0] = 0
     robber[1] = 0
 
-    cops[0][1] = 1
-    for i in range(len(cops)-1):
-        if i % 2 != 0 and i != 0:
-            cops[i][1] = i+2
+    for i in range(len(cops)):
+        cops[i][1] = (i*2)+1
         
         cops[i][2] = 7
         cops[i][3] = 10
@@ -151,7 +149,7 @@ def reset_game():
     
     labelWin.config(text="")
 
-    print("Reiniciado")
+    print("Juego reiniciado")
 
 def calc_distance():
     print("Posiciones")
