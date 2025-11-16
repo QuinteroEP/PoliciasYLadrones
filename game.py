@@ -79,7 +79,7 @@ def move_robber(directionX, directionY):
         board.poner_pieza(robber[0], robber[1], "0")
 
         for i in range(len(cops)):
-            board.poner_pieza(cops[i][1], 7, "X")
+            board.poner_pieza(cops[i][1], cops[i][2], "X")
         check_winner()
         move_cop()
 
