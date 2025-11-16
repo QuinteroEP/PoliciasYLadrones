@@ -8,4 +8,7 @@
         <li><b>venv\scripts\activate</b>(Windows)</li>
         <li><b>source venv/bin/install</b>(MacOS/Unix)</li>
     <li>Ejecutar el programa</li>
-</o>
+</ol>
+
+## Universidad Javeriana - Análisis de Algoritmos 2025
+<i>Pablo Quintero</i>
