@@ -83,8 +83,6 @@ def move_robber(directionX, directionY):
         check_winner()
         move_cop()
 
-    print(robber)
-
 def move_cop():
     distance = 100
     closest_id = 10
@@ -125,7 +123,6 @@ def start_game():
 
     if pos or pos == 0:
         robber[0] = pos
-        print(robber[0])
         board.poner_pieza(robber[0], 0, "0")
 
         for i in range(len(cops)):
@@ -155,10 +152,13 @@ def calc_distance():
     print("Posiciones")
 
     for i in range(len(cops)):
-            posCop = (cops[i][1],cops[i][2])
-            posRob = (robber[0], robber[1])
+            if cops[i][2] < robber[1]:
+                cops[i][3] = 10
+            else:
+                posCop = (cops[i][1],cops[i][2])
+                posRob = (robber[0], robber[1])
 
-            cops[i][3] = dist(posCop, posRob)
+                cops[i][3] = dist(posCop, posRob)
 
             print(f"Policia {i+1}: {cops[i][3]}")
             
